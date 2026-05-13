@@ -1,282 +1,70 @@
-# 📊 Análise de Dados com Python e Pandas
+# 📊 Excel Analytics com Python, Pandas e OpenPyXL
 
-Projeto desenvolvido para estudos e aplicações de Análise de Dados utilizando Python e a poderosa biblioteca Pandas.
+Projeto desenvolvido em Python para realizar análise de dados em planilhas Excel utilizando as bibliotecas Pandas e OpenPyXL.
 
-Este repositório aborda desde a instalação do ambiente até manipulação, limpeza, exploração e análise de dados de forma prática e detalhada.
+O sistema lê uma planilha contendo registros de ocupação, agrupa os dados por matrícula e nome, soma as horas e exibe um relatório organizado no terminal.
+
+---
+
+# 🚀 Funcionalidades
+
+✅ Leitura de arquivos Excel  
+✅ Manipulação de dados com Pandas  
+✅ Agrupamento de informações  
+✅ Soma automática de horas  
+✅ Relatório em console  
+✅ Automação de análise de dados  
 
 ---
 
 # 🐍 O que é Python?
 
-Python é uma linguagem de programação de alto nível, conhecida por sua sintaxe simples, legibilidade e grande utilização em:
+Python é uma linguagem de programação moderna, simples e poderosa, muito utilizada em:
 
 - Ciência de Dados
-- Inteligência Artificial
 - Automação
+- Inteligência Artificial
 - Desenvolvimento Web
 - Análise de Dados
-- Machine Learning
 
-Python se tornou uma das principais linguagens do mercado devido à sua produtividade e vasta quantidade de bibliotecas.
+Sua sintaxe simples facilita o aprendizado e aumenta a produtividade.
 
 ---
 
 # 📚 O que é Pandas?
 
-Pandas é uma biblioteca do Python criada para manipulação e análise de dados.
+Pandas é uma biblioteca do Python especializada em:
 
-Ela permite trabalhar com:
+- Manipulação de dados
+- Leitura de planilhas
+- Organização de tabelas
+- Análise de informações
+- Tratamento de dados
 
-✅ Planilhas  
-✅ Arquivos CSV  
-✅ Dados em Excel  
-✅ Bancos de dados  
-✅ Tabelas estruturadas  
+Ela trabalha principalmente com:
 
-Com Pandas é possível:
+## 🔹 DataFrame
 
-- Ler dados
-- Limpar informações
-- Filtrar registros
-- Criar análises
-- Gerar estatísticas
-- Organizar tabelas
-- Transformar dados
+Estrutura semelhante a uma tabela Excel:
 
----
-
-# 🚀 Instalação do Python
-
-## 1️⃣ Baixe o Python
-
-Acesse o site oficial:
-
-```bash
-https://www.python.org/downloads/
-```
-
-## 2️⃣ Verifique a instalação
-
-Abra o terminal e execute:
-
-```bash
-python --version
-```
-
----
-
-# ⚙️ Instalação do Pandas
-
-## Instale utilizando o pip
-
-```bash
-pip install pandas
-```
-
----
-
-# 📦 Bibliotecas Recomendadas
-
-Além do Pandas, é comum utilizar:
-
-```bash
-pip install numpy matplotlib seaborn openpyxl
-```
-
-### Explicação:
-
-| Biblioteca | Função |
-|---|---|
-| Pandas | Manipulação de dados |
-| NumPy | Operações matemáticas |
-| Matplotlib | Criação de gráficos |
-| Seaborn | Visualização de dados |
-| Openpyxl | Leitura de arquivos Excel |
-
----
-
-# 📂 Estrutura do Projeto
-
-```bash
-analise-dados-python/
-│
-├── datasets/
-│
-├── notebooks/
-│
-├── scripts/
-│
-├── imagens/
-│
-├── requirements.txt
-│
-└── README.md
-```
-
----
-
-# 📖 Conceitos Fundamentais do Pandas
-
----
-
-# 🔹 DataFrame
-
-O DataFrame é a principal estrutura do Pandas.
-
-Ele funciona como uma tabela:
-
-| Nome | Idade | Cidade |
+| Registro | Nome | Horas |
 |---|---|---|
-| João | 25 | São Paulo |
-| Maria | 30 | Campinas |
+| 1001 | João | 5 |
+| 1001 | João | 3 |
+| 1002 | Maria | 4 |
 
 ---
 
-# 🔹 Series
+# 📘 O que é OpenPyXL?
 
-Uma Series representa uma coluna única de dados.
+OpenPyXL é uma biblioteca usada para:
 
-Exemplo:
+✅ Ler arquivos `.xlsx`  
+✅ Criar planilhas Excel  
+✅ Editar células  
+✅ Automatizar relatórios  
 
-```python
-import pandas as pd
-
-idades = pd.Series([20, 25, 30])
-print(idades)
-```
-
----
-
-# 📥 Importando o Pandas
-
-```python
-import pandas as pd
-```
-
-O `pd` é um apelido utilizado por convenção.
-
----
-
-# 📄 Lendo Arquivos CSV
-
-```python
-import pandas as pd
-
-df = pd.read_csv('dados.csv')
-
-print(df)
-```
-
----
-
-# 📊 Visualizando os Dados
-
-## Primeiras linhas
-
-```python
-df.head()
-```
-
-## Últimas linhas
-
-```python
-df.tail()
-```
-
-## Informações gerais
-
-```python
-df.info()
-```
-
-## Estatísticas básicas
-
-```python
-df.describe()
-```
-
----
-
-# 🧹 Limpeza de Dados
-
-## Verificando valores nulos
-
-```python
-df.isnull().sum()
-```
-
-## Removendo valores nulos
-
-```python
-df.dropna()
-```
-
-## Preenchendo valores vazios
-
-```python
-df.fillna(0)
-```
-
----
-
-# 🔎 Filtrando Dados
-
-## Exemplo:
-
-```python
-df[df['idade'] > 18]
-```
-
----
-
-# 📈 Criando Gráficos
-
-```python
-import matplotlib.pyplot as plt
-
-df['vendas'].plot()
-plt.show()
-```
-
----
-
-# 💾 Salvando Arquivos
-
-## Exportar CSV
-
-```python
-df.to_csv('novo_arquivo.csv')
-```
-
-## Exportar Excel
-
-```python
-df.to_excel('dados.xlsx')
-```
-
----
-
-# 🧠 Principais Aplicações da Análise de Dados
-
-- Business Intelligence
-- Dashboards
-- Relatórios
-- Ciência de Dados
-- Machine Learning
-- Análise Financeira
-- Marketing
-- Automação empresarial
-
----
-
-# 🎯 Objetivos do Projeto
-
-- Aprender análise de dados
-- Dominar a biblioteca Pandas
-- Trabalhar com arquivos CSV e Excel
-- Criar visualizações
-- Manipular grandes volumes de dados
-- Desenvolver habilidades em Data Science
+O Pandas utiliza o OpenPyXL internamente para manipular arquivos Excel.
 
 ---
 
@@ -284,51 +72,212 @@ df.to_excel('dados.xlsx')
 
 - Python 3.x
 - Pandas
-- NumPy
-- Matplotlib
-- Seaborn
-- Jupyter Notebook
+- OpenPyXL
 
 ---
 
-# ▶️ Como Executar
+# ⚙️ Instalação do Python
+
+## 1️⃣ Baixe o Python
+
+Acesse:
+
+```bash
+https://www.python.org/downloads/
+```
+
+## 2️⃣ Verifique a instalação
+
+```bash
+python --version
+```
+
+---
+
+# 📦 Instalação das Bibliotecas
+
+## Instale o Pandas
+
+```bash
+pip install pandas
+```
+
+## Instale o OpenPyXL
+
+```bash
+pip install openpyxl
+```
+
+---
+
+# 📂 Estrutura do Projeto
+
+```bash
+excel-analytics/
+│
+├── ocupacao.xlsx
+├── main.py
+├── requirements.txt
+└── README.md
+```
+
+---
+
+# ▶️ Como Executar o Projeto
 
 ## 1️⃣ Clone o repositório
 
 ```bash
-git clone https://github.com/seu-usuario/analise-dados-python.git
+git clone https://github.com/seu-usuario/excel-analytics.git
 ```
 
 ## 2️⃣ Entre na pasta
 
 ```bash
-cd analise-dados-python
+cd excel-analytics
 ```
 
 ## 3️⃣ Instale as dependências
 
 ```bash
-pip install -r requirements.txt
+pip install pandas openpyxl
 ```
 
-## 4️⃣ Execute os scripts
+## 4️⃣ Execute o projeto
 
 ```bash
-python nome_do_arquivo.py
+python main.py
 ```
 
 ---
 
-# 📚 Aprendizados
+# 🧠 Explicação Detalhada do Código
 
-Neste projeto são praticados:
+---
 
-✅ Manipulação de dados  
-✅ Limpeza de dados  
-✅ Estatística básica  
-✅ Visualização de dados  
-✅ Automação de análises  
-✅ Estruturação de projetos  
+# 📥 Importação do Pandas
+
+```python
+import pandas as pd
+```
+
+O `pd` é apenas um apelido para facilitar a escrita do código.
+
+---
+
+# 📄 Leitura da Planilha Excel
+
+```python
+planilha = pd.read_excel('ocupacao.xlsx')
+```
+
+Aqui o Pandas:
+
+✅ Abre o arquivo Excel  
+✅ Lê os dados  
+✅ Converte tudo em um DataFrame  
+
+---
+
+# 🔎 Agrupamento dos Dados
+
+```python
+resultado = planilha.groupby(["Registro", "Nome"])["Horas"].sum()
+```
+
+## O que acontece aqui?
+
+### `groupby()`
+
+Agrupa os dados por:
+
+- Registro
+- Nome
+
+### `["Horas"]`
+
+Seleciona apenas a coluna de horas.
+
+### `.sum()`
+
+Realiza a soma das horas agrupadas.
+
+---
+
+# 📊 Exemplo Visual
+
+## Dados da planilha:
+
+| Registro | Nome | Horas |
+|---|---|---|
+| 1001 | João | 5 |
+| 1001 | João | 3 |
+| 1002 | Maria | 4 |
+
+---
+
+## Resultado:
+
+| Registro | Nome | Total de Horas |
+|---|---|---|
+| 1001 | João | 8 |
+| 1002 | Maria | 4 |
+
+---
+
+# 🔁 Loop para Exibição
+
+```python
+for (registro, nome), horas in resultado.items():
+```
+
+O loop percorre cada linha agrupada.
+
+---
+
+# 🖥 Exibição do Resultado
+
+```python
+print(f'O registro {registro} de {nome} têm {horas} horas de ocupação no SENAI')
+```
+
+Exemplo:
+
+```bash
+O registro 1001 de João têm 8 horas de ocupação no SENAI
+```
+
+---
+
+# 📚 Conceitos Aprendidos
+
+✅ Leitura de Excel com Python  
+✅ Manipulação de DataFrames  
+✅ Agrupamento de dados  
+✅ Soma de valores  
+✅ Loops em Python  
+✅ Automação de relatórios  
+
+---
+
+# 🎯 Objetivos do Projeto
+
+- Aprender análise de dados
+- Trabalhar com planilhas Excel
+- Utilizar Pandas na prática
+- Automatizar processos
+- Melhorar lógica de programação
+
+---
+
+# 💡 Possíveis Melhorias Futuras
+
+- Interface gráfica
+- Exportação automática de relatórios
+- Gráficos com Matplotlib
+- Dashboard interativo
+- Filtros avançados
+- Integração com banco de dados
 
 ---
 
